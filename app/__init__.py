@@ -1,4 +1,17 @@
 from flask import Flask
+from flask_mail import Mail
+from flask_wtf.csrf import CSRFProtect
+csrf = CSRFProtect()
+
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'aeiou'
+app.config['MAIL_SERVER'] = 'smtp.mailtrap.io'
+app.config['MAIL_PORT'] = '465'
+app.config['MAIL_USERNAME'] = '9049b7e6c40292'
+app.config['MAIL_PASSWORD'] = '686167b86aa0eb' 
+
+mail = Mail(app)
+csrf.init_app(app)
 from app import views
