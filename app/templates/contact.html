@@ -34,28 +34,27 @@
                 {{ form.csrf_token }}
                 <br/>
                 
-                <!--name-->
+            
                 <h5>{{ form.name.label }}
                     <label class="required">{Required}</label>
                 </h5>
                 Please enter your full name<br/>
                 {{ form.name(size=50) }}
 
-                <!--email-->
+               
                 <h5>{{ form.email.label }}
                     <label class="required">{Required}</label>
                 </h5>
                 Please enter your e-mail address<br/>
                 {{ form.email(size=50) }}
 
-                <!--subject of message-->
                 <h5>{{ form.subject.label }}
                     <label class="required">{Required}</label>
                 </h5>
                 Please enter the subject of your message<br/>
                 {{ form.subject(size=50) }}
 
-                <!--message-->
+                
                 <h5>{{ form.txt_area.label }}
                     <label class="required">{Required}</label>
                 </h5>
